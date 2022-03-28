@@ -1,1 +1,5 @@
 <p>setup works!</p>
+
+<mat-select [formControl]="inputControl">
+  <mat-option *ngFor="let input of inputs" [value]="input.deviceId">{{ input | json }}</mat-option>
+</mat-select>
