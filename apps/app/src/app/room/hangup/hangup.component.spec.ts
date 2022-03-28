@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { HangupComponent } from './hangup.component';
 
@@ -8,7 +9,8 @@ describe('HangupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HangupComponent ]
+      declarations: [ HangupComponent ],
+      schemas: [NO_ERRORS_SCHEMA],
     })
     .compileComponents();
   });
