@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './theming/colors' as color;
+
+@include mat.core();
+
+$color-primary: mat.define-palette(color.$light-mode);
+$color-accent: mat.define-palette(color.$light-mode);
+
+$color-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $color-primary,
+      accent: $color-accent,
+    ),
+  )
+);
+
+@include mat.all-component-themes($color-theme);
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
