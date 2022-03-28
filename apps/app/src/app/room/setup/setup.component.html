@@ -1,5 +1,21 @@
 <p>setup works!</p>
 
+<form formControlName="form" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field appearance="fill">
+    <mat-label>Entrada de audio</mat-label>
 <mat-select [formControl]="inputControl">
-  <mat-option *ngFor="let input of inputs" [value]="input.deviceId">{{ input | json }}</mat-option>
+  <mat-option *ngFor="let input of inputs" [value]="input.deviceId">{{ input.label }}</mat-option>
 </mat-select>
+</mat-form-field>
+
+    <mat-form-field appearance="fill">
+    <mat-label>Saida de audio</mat-label>
+<mat-select [formControl]="inputControl">
+  <mat-option *ngFor="let output of outputs" [value]="output.deviceId">{{ output.label }}</mat-option>
+</mat-select>
+</mat-form-field>
+
+<button mat-raised-button>Basic</button>
+</form>
+
+<pre>{{ form.value | json }}</pre>
