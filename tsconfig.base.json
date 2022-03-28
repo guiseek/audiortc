@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@audiortc/core/adapters": ["libs/core/adapters/src/index.ts"],
+      "@audiortc/core/ports": ["libs/core/ports/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

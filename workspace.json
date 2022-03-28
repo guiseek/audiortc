@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "app": "apps/app"
+    "app": "apps/app",
+    "core-adapters": "libs/core/adapters",
+    "core-ports": "libs/core/ports",
+    "gateway": "apps/gateway"
   }
 }
